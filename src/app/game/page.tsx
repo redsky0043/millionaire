@@ -6,12 +6,12 @@ import { questions } from '../../../public/questions.json'
 import { Option } from "@/components/Option";
 
 const Game = () => {
-    const [selectedOption, setSelectedOption] = useState(null);
-    const [correctOption, setCorrectOption] = useState(null);
-    const [wrongOption, setWrongOption] = useState(null);
+    const [selectedOption, setSelectedOption] = useState<string | null>(null);
+    const [correctOption, setCorrectOption] = useState<string | null>(null);
+    const [wrongOption, setWrongOption] = useState<string | null>(null);
     const curQuestion = questions[0]
 
-    const handleSelectOption = (optionId) => {
+    const handleSelectOption = (optionId: string) => {
         setSelectedOption(optionId);
         if (optionId === curQuestion.answer) {
             setCorrectOption(optionId);
