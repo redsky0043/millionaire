@@ -1,6 +1,5 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import { FC } from 'react'
 
 import styles from "../page.module.scss";
 
@@ -8,7 +7,7 @@ type ResultPropsType = {
     score: string,
 }
 
-const Result = ({ score = 0 }) => {
+const Result = () => {
     return (
         <main className={styles.hero}>
             <Image
@@ -23,7 +22,7 @@ const Result = ({ score = 0 }) => {
                     Total score:
                 </p>
                 <p className={styles.title}>
-                    ${score} earned
+                    score earned
                 </p>
             </div>
             <Link href='/game' className={styles.link}>
