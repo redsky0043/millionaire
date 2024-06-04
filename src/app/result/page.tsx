@@ -1,9 +1,14 @@
 import Link from 'next/link'
 import Image from 'next/image'
+import { FC } from 'react'
 
-import styles from "./page.module.scss";
+import styles from "../page.module.scss";
 
-export default function Home() {
+type ResultPropsType = {
+    score: string,
+}
+
+const Result: FC<ResultPropsType> = ({ score = 0 }) => {
     return (
         <main className={styles.hero}>
             <Image
@@ -14,13 +19,18 @@ export default function Home() {
                 className={styles.img}
             />
             <div className={styles.text}>
+                <p className={styles.subtitle}>
+                    Total score:
+                </p>
                 <p className={styles.title}>
-                    Who wants to be a millionaire?
+                    ${score} earned
                 </p>
             </div>
             <Link href='/game' className={styles.link}>
-                Start
+                Try again
             </Link>
         </main>
-);
+    );
 }
+
+export default Result

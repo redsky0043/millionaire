@@ -1,0 +1,15 @@
+.button {
+  padding: 1rem 1.5rem;
+  background-color: var(--orange-100);
+  transition: background-color 0.3s ease;
+  border-radius: 0.5rem;
+  width: 100%;
+
+  &:hover {
+    background-color: var(--orange-80);
+  }
+
+  &:active {
+    background-color: var(--orange-100);
+  }
+}
