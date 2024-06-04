@@ -8,7 +8,7 @@ type ResultPropsType = {
     score: string,
 }
 
-const Result: FC<ResultPropsType> = ({ score = 0 }) => {
+const Result = ({ score = 0 }) => {
     return (
         <main className={styles.hero}>
             <Image
