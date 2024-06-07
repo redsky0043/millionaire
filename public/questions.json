@@ -1,4 +1,6 @@
 {
+  "QUESTION_DELAY" : 300,
+  "NEXT_QUESTION_DELAY" : 200,
   "questions": [
     {
       "question": "What is the capital of France?",
@@ -20,7 +22,318 @@
           "value": "Rome"
         }
       ],
+      "answer": "F"
+    },
+    {
+      "question": "Which is the longest river in the world?",
+      "options": [
+        {
+          "id": "A",
+          "value": "Amazon"
+        },
+        {
+          "id": "B",
+          "value": "Nile"
+        },
+        {
+          "id": "C",
+          "value": "Yangtze"
+        },
+        {
+          "id": "D",
+          "value": "Mississippi"
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "question": "Who painted the Mona Lisa?",
+      "options": [
+        {
+          "id": "A",
+          "value": "Vincent van Gogh"
+        },
+        {
+          "id": "B",
+          "value": "Pablo Picasso"
+        },
+        {
+          "id": "C",
+          "value": "Leonardo da Vinci"
+        },
+        {
+          "id": "D",
+          "value": "Michelangelo"
+        }
+      ],
       "answer": "C"
+    },
+    {
+      "question": "What is the smallest planet in our solar system?",
+      "options": [
+        {
+          "id": "A",
+          "value": "Mercury"
+        },
+        {
+          "id": "B",
+          "value": "Venus"
+        },
+        {
+          "id": "C",
+          "value": "Mars"
+        },
+        {
+          "id": "D",
+          "value": "Earth"
+        }
+      ],
+      "answer": "A"
+    },
+    {
+      "question": "Which ocean is the largest?",
+      "options": [
+        {
+          "id": "A",
+          "value": "Indian"
+        },
+        {
+          "id": "B",
+          "value": "Pacific"
+        },
+        {
+          "id": "C",
+          "value": "Atlantic"
+        },
+        {
+          "id": "D",
+          "value": "Arctic"
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "question": "What is the chemical symbol for gold?",
+      "options": [
+        {
+          "id": "A",
+          "value": "Ag"
+        },
+        {
+          "id": "B",
+          "value": "Au"
+        },
+        {
+          "id": "C",
+          "value": "Pb"
+        },
+        {
+          "id": "D",
+          "value": "Fe"
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "question": "Who wrote 'To Kill a Mockingbird'?",
+      "options": [
+        {
+          "id": "A",
+          "value": "Mark Twain"
+        },
+        {
+          "id": "B",
+          "value": "Harper Lee"
+        },
+        {
+          "id": "C",
+          "value": "F. Scott Fitzgerald"
+        },
+        {
+          "id": "D",
+          "value": "Ernest Hemingway"
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "question": "What is the hardest natural substance on Earth?",
+      "options": [
+        {
+          "id": "A",
+          "value": "Gold"
+        },
+        {
+          "id": "B",
+          "value": "Iron"
+        },
+        {
+          "id": "C",
+          "value": "Diamond"
+        },
+        {
+          "id": "D",
+          "value": "Platinum"
+        }
+      ],
+      "answer": "C"
+    },
+    {
+      "question": "Who was the first President of the United States?",
+      "options": [
+        {
+          "id": "A",
+          "value": "Abraham Lincoln"
+        },
+        {
+          "id": "B",
+          "value": "Thomas Jefferson"
+        },
+        {
+          "id": "C",
+          "value": "John Adams"
+        },
+        {
+          "id": "D",
+          "value": "George Washington"
+        }
+      ],
+      "answer": "D"
+    },
+    {
+      "question": "What is the main ingredient in guacamole?",
+      "options": [
+        {
+          "id": "A",
+          "value": "Tomato"
+        },
+        {
+          "id": "B",
+          "value": "Avocado"
+        },
+        {
+          "id": "C",
+          "value": "Lettuce"
+        },
+        {
+          "id": "D",
+          "value": "Spinach"
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "question": "What is the tallest mountain in the world?",
+      "options": [
+        {
+          "id": "A",
+          "value": "K2"
+        },
+        {
+          "id": "B",
+          "value": "Kangchenjunga"
+        },
+        {
+          "id": "C",
+          "value": "Mount Everest"
+        },
+        {
+          "id": "D",
+          "value": "Lhotse"
+        }
+      ],
+      "answer": "C"
+    },
+    {
+      "question": "What is the capital city of Australia?",
+      "options": [
+        {
+          "id": "A",
+          "value": "Sydney"
+        },
+        {
+          "id": "B",
+          "value": "Melbourne"
+        },
+        {
+          "id": "C",
+          "value": "Brisbane"
+        },
+        {
+          "id": "D",
+          "value": "Canberra"
+        }
+      ],
+      "answer": "D"
+    },
+    {
+      "question": "Which planet is known as the Red Planet?",
+      "options": [
+        {
+          "id": "A",
+          "value": "Jupiter"
+        },
+        {
+          "id": "B",
+          "value": "Mars"
+        },
+        {
+          "id": "C",
+          "value": "Saturn"
+        },
+        {
+          "id": "D",
+          "value": "Venus"
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "question": "Who developed the theory of relativity?",
+      "options": [
+        {
+          "id": "A",
+          "value": "Isaac Newton"
+        },
+        {
+          "id": "B",
+          "value": "Galileo Galilei"
+        },
+        {
+          "id": "C",
+          "value": "Nikola Tesla"
+        },
+        {
+          "id": "D",
+          "value": "Albert Einstein"
+        }
+      ],
+      "answer": "D"
+    },
+    {
+      "question": "What is the capital of Japan?",
+      "options": [
+        {
+          "id": "A",
+          "value": "Osaka"
+        },
+        {
+          "id": "B",
+          "value": "Tokyo"
+        },
+        {
+          "id": "C",
+          "value": "Kyoto"
+        },
+        {
+          "id": "D",
+          "value": "Hiroshima"
+        }
+      ],
+      "answer": "B"
     }
+  ],
+  "prizes": [
+    "$500", "$1000", "$2000", "$4000", "$8000", "$16000", "$32000", "$64000", "$125000", "$250000", "$500000", "$1000000"
   ]
 }

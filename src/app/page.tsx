@@ -1,11 +1,14 @@
 import Link from 'next/link'
 import Image from 'next/image'
 
+import { ROUTES } from '@/common/routes'
 import styles from "./page.module.scss";
+import classNames from "classnames";
 
 export default function Home() {
+    const mainClass = classNames(styles.hero, styles.bg);
     return (
-        <main className={styles.hero}>
+        <main className={mainClass}>
             <Image
                 alt='hand'
                 width={288}
@@ -18,9 +21,9 @@ export default function Home() {
                     Who wants to be a millionaire?
                 </p>
             </div>
-            <Link href='/game' className={styles.link}>
+            <Link href={ROUTES.GAME} className={styles.link}>
                 Start
             </Link>
         </main>
-);
+    );
 }

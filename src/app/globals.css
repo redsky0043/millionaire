@@ -53,6 +53,11 @@
   --green-100: #47D867;
   --red-5: #FDEEED;
   --red-100: #EC6259;
+
+  /* Z-indexes */
+  --questions: 1;
+  --menu: 10;
+  --hamburger: 100;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -123,6 +128,7 @@ a {
 
 button {
   border: none;
+  background-color: transparent;
 }
 
 a {

@@ -1,13 +1,20 @@
+import { type FC } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 
-import styles from "../page.module.scss";
+import { ROUTES } from '@/common/routes'
+import styles from "@/app/page.module.scss";
+import { prizes } from '../../../../public/questions.json'
 
 type ResultPropsType = {
-    score: string,
+    params: {
+        score: number,
+    },
 }
 
-const Result = () => {
+const Result: FC<ResultPropsType> = ({ params }) => {
+    const finalScore = prizes[params.score]
+        
     return (
         <main className={styles.hero}>
             <Image
@@ -22,10 +29,10 @@ const Result = () => {
                     Total score:
                 </p>
                 <p className={styles.title}>
-                    score earned
+                    {finalScore} earned
                 </p>
             </div>
-            <Link href='/game' className={styles.link}>
+            <Link href={ROUTES.HOME} className={styles.link}>
                 Try again
             </Link>
         </main>

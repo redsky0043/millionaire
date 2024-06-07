@@ -1,0 +1,55 @@
+.menuButton {
+  position: relative;
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: transparent;
+  cursor: pointer;
+  padding: 5px 4px;
+  z-index: var(--hamburger);
+
+  @media (min-width: 768px) {
+    display: none;
+  }
+
+  span,
+  span::after,
+  span::before {
+    position: absolute;
+    display: block;
+    width: 16px;
+    height: 2px;
+    border-radius: 2px;
+    background-color: var(--black);
+    transition: transform 0.3s, background-color 0.3s;
+  }
+
+  span {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  span::after {
+    content: '';
+    transform: translateY(-5px);
+  }
+
+  span::before {
+    content: '';
+    transform: translateY(5px);
+  }
+
+  &.open {
+    span {
+      background-color: transparent;
+
+      &::after {
+        transform: rotate(-45deg);
+      }
+
+      &::before {
+        transform: rotate(45deg);
+      }
+    }
+  }
+}

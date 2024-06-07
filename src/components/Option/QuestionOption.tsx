@@ -1,19 +1,8 @@
-import { FC } from 'react'
+import { type FC } from 'react'
 import classNames from 'classnames'
 
 import styles from './option.module.scss'
-
-enum OptionVariant {
-    Default = 'default',
-    Selected = 'selected',
-    Correct = 'correct',
-    Wrong = 'wrong'
-}
-
-type OptionType = {
-    id: string,
-    value: string,
-}
+import { OptionType } from "@/types";
 
 type QuestionOptionType = {
     option: OptionType,
@@ -23,7 +12,7 @@ type QuestionOptionType = {
     selectOption: (id: string) => void,
 }
 
-const Option: FC<QuestionOptionType> = ({
+const QuestionOption: FC<QuestionOptionType> = ({
     option,
     selectOption,
     isSelected,
@@ -37,12 +26,12 @@ const Option: FC<QuestionOptionType> = ({
     });
 
     return (
-        <div className={optionClass} onClick={() => selectOption(option.id)}>
+        <button className={optionClass} onClick={() => selectOption(option.id)}>
             <div className={styles.wrapper}>
                 <svg viewBox="0 0 373 72" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
                         d="M22.7172 5.28344C24.8781 2.28016 28.3521 0.5 32.052 0.5H340.948C344.648 0.5 348.122 2.28016 350.283 5.28344L372.384 36L350.283 66.7166C348.122 69.7198 344.648 71.5 340.948 71.5H32.052C28.3521 71.5 24.8781 69.7198 22.7172 66.7166L0.615976 36L22.7172 5.28344Z"
-                        fill="none" stroke="white"/>
+                    />
                 </svg>
                 <p className={styles.text}>
                     <span className={styles.key}>
@@ -51,8 +40,8 @@ const Option: FC<QuestionOptionType> = ({
                     {option.value}
                 </p>
             </div>
-        </div>
+        </button>
     );
 };
 
-export default Option;
+export default QuestionOption;

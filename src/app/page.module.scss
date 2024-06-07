@@ -5,9 +5,9 @@
   align-items: center;
   gap: 3rem;
   padding: 3rem 1rem;
-  min-height: 100vh;
-  background-image: linear-gradient(to bottom right, var(--white) 50%, var(--orange-5) 50%);
+  min-height: 100svh;
   margin-bottom: 1.5rem;
+  background-color: var(--white);
 
   @media (min-width: 768px) {
     display: grid;
@@ -20,13 +20,17 @@
   @media (min-width: 1024px) {
     padding: 5rem;
   }
+
+  &.bg {
+    background-image: linear-gradient(to bottom right, var(--white) 50%, var(--orange-5) 50%);
+  }
 }
 
 .img {
   width: 100%;
   height: auto;
   margin-top: 2rem;
-  max-width: 624px;
+  max-width: 39rem;
 
   @media (min-width: 768px) {
     margin-top: 0;
@@ -78,6 +82,7 @@
   }
 }
 
+// TODO - check
 /* Enable hover only on non-touch devices */
 @media (hover: hover) and (pointer: fine) {
   .card:hover {

@@ -1,11 +1,11 @@
 .option {
   --bg-color: var(--white);
   --border-color: var(--gray-2);
+  --color: var(--black);
 
   position: relative;
   display: flex;
   justify-content: center;
-
 
   &::before {
     position: absolute;
@@ -15,24 +15,36 @@
     height: 1px;
     transform: translateY(-50%);
     background-color: var(--border-color);
+    transition: background-color 0.3s;
     content: '';
   }
 
   svg {
     display: block;
-    width: 288px;
-    height: 56px;
+    width: 18rem;
+    height: 3.5rem;
+
+    @media (min-width: 768px) {
+      width: 24.4rem;
+      height: 4.5rem;
+    }
 
     path {
       stroke: var(--border-color);
       fill: var(--bg-color);
+      transition: stroke 0.3s, fill 0.3s;
     }
+  }
+
+  &:hover {
+    --border-color: var(--orange-100);
   }
 }
 
 .selected {
   --bg-color: var(--orange-5);
   --border-color: var(--orange-100);
+  animation: 1s ease-in infinite pulse;
 }
 
 .correct {
@@ -56,9 +68,58 @@
   left: 2rem;
   transform: translateY(-50%);
   color: var(--black);
+  font-size: 0.875rem;
+  line-height: 116%;
+  font-weight: 300;
+
+  @media (min-width: 768px) {
+    font-size: 1.25rem;
+    font-weight: 400;
+    left: 3rem;
+  }
 }
 
 .key {
   margin-right: 0.5rem;
   color: var(--orange-80);
+}
+
+.prise {
+  pointer-events: none;
+
+  svg {
+    width: 15rem;
+    height: 2rem;
+  }
+
+  .text {
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--color);
+  }
+
+  .wrapper {
+    cursor: auto;
+  }
+}
+
+.current {
+  --border-color: var(--orange-100);
+  --color: var(--orange-100);
+}
+
+.passed {
+  --border-color: var(--gray-2);
+  --color: var(--gray-2);
+}
+
+@keyframes pulse {
+  from {
+    --bg-color: var(--orange-5);
+    --border-color: var(--orange-100);
+  }
+  to {
+    --bg-color: var(--white);
+    --border-color: var(--gray-2);
+  }
 }

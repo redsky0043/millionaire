@@ -1,1 +1,2 @@
-export { default as Option } from './Option';
+export { default as QuestionOption } from './QuestionOption';
+export { default as PriseOption } from './PriseOption';
