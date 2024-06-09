@@ -1,6 +1,6 @@
 {
-  "QUESTION_DELAY" : 3000,
-  "NEXT_QUESTION_DELAY" : 2000,
+  "QUESTION_DELAY" : 300,
+  "NEXT_QUESTION_DELAY" : 200,
   "questions": [
     {
       "question": "What is the capital of France?",
@@ -22,7 +22,7 @@
           "value": "Rome"
         }
       ],
-      "answer": "C"
+      "answer": ["C"]
     },
     {
       "question": "Which is the longest river in the world?",
@@ -44,7 +44,7 @@
           "value": "Mississippi"
         }
       ],
-      "answer": "B"
+      "answer": ["B"]
     },
     {
       "question": "Who painted the Mona Lisa?",
@@ -66,7 +66,7 @@
           "value": "Michelangelo"
         }
       ],
-      "answer": "C"
+      "answer": ["C"]
     },
     {
       "question": "What is the smallest planet in our solar system?",
@@ -88,7 +88,7 @@
           "value": "Earth"
         }
       ],
-      "answer": "A"
+      "answer": ["A"]
     },
     {
       "question": "Which ocean is the largest?",
@@ -110,7 +110,7 @@
           "value": "Arctic"
         }
       ],
-      "answer": "B"
+      "answer": ["B"]
     },
     {
       "question": "What is the chemical symbol for gold?",
@@ -132,7 +132,7 @@
           "value": "Fe"
         }
       ],
-      "answer": "B"
+      "answer": ["B"]
     },
     {
       "question": "Who wrote 'To Kill a Mockingbird'?",
@@ -154,7 +154,7 @@
           "value": "Ernest Hemingway"
         }
       ],
-      "answer": "B"
+      "answer": ["B"]
     },
     {
       "question": "What is the hardest natural substance on Earth?",
@@ -176,7 +176,7 @@
           "value": "Platinum"
         }
       ],
-      "answer": "C"
+      "answer": ["C"]
     },
     {
       "question": "Who was the first President of the United States?",
@@ -198,7 +198,7 @@
           "value": "George Washington"
         }
       ],
-      "answer": "D"
+      "answer": ["D"]
     },
     {
       "question": "What is the main ingredient in guacamole?",
@@ -220,7 +220,7 @@
           "value": "Spinach"
         }
       ],
-      "answer": "B"
+      "answer": ["B", "A"]
     },
     {
       "question": "What is the tallest mountain in the world?",
@@ -242,7 +242,7 @@
           "value": "Lhotse"
         }
       ],
-      "answer": "C"
+      "answer": ["C"]
     },
     {
       "question": "What is the capital city of Australia?",
@@ -264,7 +264,7 @@
           "value": "Canberra"
         }
       ],
-      "answer": "D"
+      "answer": ["D"]
     },
     {
       "question": "Which planet is known as the Red Planet?",
@@ -286,7 +286,7 @@
           "value": "Venus"
         }
       ],
-      "answer": "B"
+      "answer": ["B"]
     },
     {
       "question": "Who developed the theory of relativity?",
@@ -308,7 +308,7 @@
           "value": "Albert Einstein"
         }
       ],
-      "answer": "D"
+      "answer": ["D"]
     },
     {
       "question": "What is the capital of Japan?",
@@ -330,7 +330,7 @@
           "value": "Hiroshima"
         }
       ],
-      "answer": "B"
+      "answer": ["B"]
     }
   ],
   "prizes": [
