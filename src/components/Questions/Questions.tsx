@@ -22,7 +22,6 @@ const Questions: FC<QuestionsPropsType> = ({
 }) => {
   const optionClass = classNames(styles.questions, {
     [styles.disabled]: selectedOption || correctOptions.length !== 0,
-
   });
 
   return (

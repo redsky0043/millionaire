@@ -7,10 +7,10 @@ import styles from './sideMenu.module.scss';
 type SideMenuPropsType = {
   isOpen: boolean,
   prizes: string[],
-  curQuestionIndex: number,
+  currentQuestionIndex: number,
 };
 
-const SideMenu: FC<SideMenuPropsType> = ({ isOpen, prizes, curQuestionIndex }) => {
+const SideMenu: FC<SideMenuPropsType> = ({ isOpen, prizes, currentQuestionIndex }) => {
   const buttonClass = classNames(styles.sideMenu, {
     [styles.open]: isOpen,
   });
@@ -23,8 +23,8 @@ const SideMenu: FC<SideMenuPropsType> = ({ isOpen, prizes, curQuestionIndex }) =
         <PriseOption
           key={prise}
           value={prise}
-          isCurrent={curQuestionIndex === prizesLength - index}
-          isPassed={curQuestionIndex > prizesLength - index}
+          isCurrent={currentQuestionIndex === prizesLength - index}
+          isPassed={currentQuestionIndex > prizesLength - index}
         />
       ))}
     </aside>

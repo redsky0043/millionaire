@@ -16,10 +16,6 @@
         {
           "id": "C",
           "value": "Paris"
-        },
-        {
-          "id": "D",
-          "value": "Rome"
         }
       ],
       "answer": ["C"]
@@ -60,10 +56,6 @@
         {
           "id": "C",
           "value": "Leonardo da Vinci"
-        },
-        {
-          "id": "D",
-          "value": "Michelangelo"
         }
       ],
       "answer": ["C"]
@@ -130,6 +122,10 @@
         {
           "id": "D",
           "value": "Fe"
+        },
+        {
+          "id": "E",
+          "value": "Si"
         }
       ],
       "answer": ["B"]

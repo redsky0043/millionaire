@@ -18,36 +18,35 @@ const randomQuestions = getRandomQuestions(questions, 12);
 function Game() {
   const router = useRouter();
   const [isOpenModal, setIsOpenModal] = useState(false);
-
   const [selectedOption, setSelectedOption] = useState<string | null>(null);
   const [correctOptions, setCorrectOptions] = useState<string[] | []>([]);
   const [wrongOption, setWrongOption] = useState<string | null>(null);
 
-  const [curQuestionIndex, setCurQuestionIndex] = useState<number>(0);
+  const [currentQuestionIndex, setCurrentQuestionIndex] = useState<number>(0);
 
   const handleToggleModal = () => setIsOpenModal((state) => !state);
 
-  const curQuestion = randomQuestions[curQuestionIndex];
+  const currentQuestion = randomQuestions[currentQuestionIndex];
 
   const setNextQuestion = () => {
     setCorrectOptions([]);
-    setCurQuestionIndex((prevState) => prevState + 1);
+    setCurrentQuestionIndex((prevState) => prevState + 1);
   };
 
   const navigateToResult = () => {
-    router.push(`${ROUTES.RESULT}/${curQuestionIndex + 1}`);
+    router.push(`${ROUTES.RESULT}/${currentQuestionIndex + 1}`);
   };
 
   const handleSelectOption = (optionId: string) => {
     setSelectedOption(optionId);
 
     setTimeout(() => {
-      if (curQuestion.answer.includes(optionId)) {
+      if (currentQuestion.answer.includes(optionId)) {
         setCorrectOptions([optionId]);
         setWrongOption(null);
         setSelectedOption(null);
 
-        if (curQuestionIndex < randomQuestions.length - 1) {
+        if (currentQuestionIndex < randomQuestions.length - 1) {
           setTimeout(setNextQuestion, NEXT_QUESTION_DELAY);
         } else {
           navigateToResult();
@@ -55,7 +54,7 @@ function Game() {
       } else {
         setSelectedOption(null);
         setWrongOption(optionId);
-        setCorrectOptions(curQuestion.answer);
+        setCorrectOptions(currentQuestion.answer);
 
         setTimeout(navigateToResult, NEXT_QUESTION_DELAY);
       }
@@ -72,14 +71,14 @@ function Game() {
       <SideMenu
         prizes={prizes}
         isOpen={isOpenModal}
-        curQuestionIndex={curQuestionIndex}
+        currentQuestionIndex={currentQuestionIndex}
       />
       <p className={styles.text}>
-        {curQuestion?.question}
+        {currentQuestion?.question}
       </p>
       <Questions
-        currentQuestion={curQuestion}
         wrongOption={wrongOption}
+        currentQuestion={currentQuestion}
         correctOptions={correctOptions}
         selectedOption={selectedOption}
         selectOption={handleSelectOption}
